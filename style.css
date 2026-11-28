@@ -72,6 +72,11 @@ html{scroll-padding-top:96px}
 /* 右下の YouTube のアイコン（付いてくる） */
 .yt-float{position:fixed;right:22px;bottom:22px;z-index:55;width:60px;height:60px;border-radius:50%;box-shadow:0 6px 18px rgba(0,0,0,.25);background:#00579b;display:grid;place-items:center;text-decoration:none;transition:transform .15s}
 .yt-float:has(img){background:#fff}.yt-float:hover{transform:scale(1.07)}.yt-float img{width:60px;height:60px;border-radius:50%;object-fit:cover}
+/* 記事の動画のボタン（チャンネルの丸のすぐ上・画面に固定。2026-11-28） */
+.vid-float{position:fixed;right:22px;bottom:94px;z-index:55;width:168px;padding:6px 4px 4px;border-radius:8px;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.25);text-decoration:none;color:var(--ink);transition:transform .15s}
+.vid-float:hover{transform:scale(1.05);color:var(--ink)}.vid-float-label{display:block;font-size:11px;font-weight:700;line-height:1.4;text-align:center;margin-bottom:4px}
+.vid-float-thumb{display:block;position:relative;aspect-ratio:16/9;background:var(--dark);border-radius:4px;overflow:hidden}.vid-float-thumb img{width:100%;height:100%;object-fit:cover}
+.vid-float .play{width:40px;height:28px;border-radius:7px}.vid-float .play::after{left:15px;top:7px;border-width:7px 0 7px 12px}
 .yt-initial{color:#fff;font-size:26px;font-weight:700}
 .yt-mark{position:absolute;right:-4px;bottom:-2px;width:26px;height:18px;border-radius:5px;background:#ff0033;border:2px solid #fff}
 .yt-mark::after{content:"";position:absolute;left:8px;top:3.5px;border-style:solid;border-width:3.5px 0 3.5px 6px;border-color:transparent transparent transparent #fff}
@@ -122,8 +127,9 @@ html{scroll-padding-top:96px}
   .site-head.is-thin .head-right nav{display:none}
   .page-article{width:calc(100% - 28px)}
   .yt-float{width:50px;height:50px;right:14px;bottom:14px}.yt-float img{width:50px;height:50px}
+  .vid-float{width:136px;right:14px;bottom:74px}
 }
-@media print{.site-search,.backnumber-row,.yt-float,.post-side{display:none}.site-head{position:static}}
+@media print{.site-search,.backnumber-row,.yt-float,.vid-float,.post-side{display:none}.site-head{position:static}}
 .tags-edit{margin-top:10px;font-size:13px;color:var(--muted)}.tags-edit span{color:var(--pink);padding:2px 6px;border:1px dashed var(--line)}
 
 /* 元の サイト.json の見た目（書き出すプログラムが足す） */
